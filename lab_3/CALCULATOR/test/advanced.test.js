@@ -51,4 +51,38 @@ describe("Modulo",()=>{
         });
     });
 
+
+    
+
+});
+
+
+
+describe("GCD",()=>{
+    var BVAdata=[
+        [2,2,2],
+        [2,5,1],
+        [4,2,2]
+    ]
+    describe.each(BVAdata)('BVA: GCD(%i, %i), Expected: %i',(a,b,expected)=>{
+        test(`returns ${calculator.GCD(a,b)}`,()=>{
+            expect(calculator.GCD(a,b)).toBe(expected);
+        });
+    });
+
+    var DTdata=[
+        [0,89,89],
+        [-17,-35,1],
+        [65,-12,1],
+        [-78,24,6]
+    ]
+    describe.each(DTdata)('DT: GCD(%i, %i), Expected: %i',(a,b,expected) => {
+        test(`returns ${calculator.GCD(a,b)}`,()=>{
+            expect(calculator.GCD(a,b)).toBe(expected);
+        });
+    });
+
+
+    
+
 });
