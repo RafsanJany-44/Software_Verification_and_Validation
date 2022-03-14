@@ -3,26 +3,16 @@ const sorting=require("../src/3-sorting");
 
 describe("bubbleSort",()=>{
     var BVAdata=[
-        [1,2,3],
-        [4,5,9],
-        [4,6,10]
+        [[1,2,3],[1,2,3]],
+        [[1,2,3,5,6],[1,2,3,5,6]],
+        [[1,2,3,4,5],[1,2,3,4,5]],
+        [[1,2,3],[1,2,3]]
     ]
-    describe.each(BVAdata)('BVA: bubbleSort(%i, %i), Expected: %i',(a,b,expected)=>{
-        test(`returns ${sorting.bubbleSort(a,b)}`,()=>{
-            expect(sorting.bubbleSort(a,b)).toBe(expected);
+    describe.each(BVAdata)('BVA: bubbleSort(%a), Expected: %a',(a,expected)=>{
+        test(`returns ${sorting.bubbleSort(a)}`,()=>{
+            expect(sorting.bubbleSort(a)).toEqual(expected);
         });
     });
 
-    var DTdata=[
-        [0,89,89],
-        [-17,-35,-52],
-        [65,-12,53],
-        [-78,24,-54]
-    ]
-    describe.each(DTdata)('DT: bubbleSort(%i, %i), Expected: %i',(a,b,expected) => {
-        test(`returns ${sorting.bubbleSort(a,b)}`,()=>{
-            expect(sorting.bubbleSort(a,b)).toBe(expected);
-        });
-    });
 
 });

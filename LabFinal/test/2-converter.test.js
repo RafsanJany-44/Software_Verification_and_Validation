@@ -4,27 +4,16 @@ const converter=require("../src/2-converter");
 describe("WeightConverter",()=>{
     var BVAdata=[
         [1,2,"wrong input"],
-        ["ounces",5,9],
+        ["ounces",5,["0.31 pounds", "0.00 tons"]],
         [4,"ounces","wrong input"],
-        ["ounces",10,100],
-        ["ounces",3,4]
+        ["ounces",10,["0.63 pounds", "0.00 tons"]],
+        ["ounces",3,["0.19 pounds", "0.00 tons"]],
+        ['','',"wrong input"]
 
     ]
     describe.each(BVAdata)('BVA: WeightConverter(%i, %i), Expected: %i',(a,b,expected)=>{
         test(`returns ${converter.WeightConverter(a,b)}`,()=>{
-            expect(converter.WeightConverter(a,b)).toBe(expected);
-        });
-    });
-
-    var DTdata=[
-        [0,89,89],
-        [-17,-35,-52],
-        [65,-12,53],
-        [-78,24,-54]
-    ]
-    describe.each(DTdata)('DT: WeightConverter(%i, %i), Expected: %i',(a,b,expected) => {
-        test(`returns ${converter.WeightConverter(a,b)}`,()=>{
-            expect(converter.WeightConverter(a,b)).toBe(expected);
+            expect(converter.WeightConverter(a,b)).toEqual(expected);
         });
     });
 
