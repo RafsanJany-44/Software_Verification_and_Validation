@@ -3,9 +3,12 @@ const converter=require("../src/2-converter");
 
 describe("WeightConverter",()=>{
     var BVAdata=[
-        [1,2,3],
-        [4,5,9],
-        [4,6,10]
+        [1,2,"wrong input"],
+        ["ounces",5,9],
+        [4,"ounces","wrong input"],
+        ["ounces",10,100],
+        ["ounces",3,4]
+
     ]
     describe.each(BVAdata)('BVA: WeightConverter(%i, %i), Expected: %i',(a,b,expected)=>{
         test(`returns ${converter.WeightConverter(a,b)}`,()=>{

@@ -8,10 +8,19 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "jest": "^27.5.1"
+    "jest": "^27.5.1",
+    "jest-html-reporters": "^3.0.6"
   },
   "scripts": {
     "test": "jest"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "lcov"
+    ],
+    "coverageDirectory": "./code-coverage=report/",
+    "reporters":["default","./node_modules/jest-html-reporters"]
   },
   "author": "Rafsan Jany",
   "license": "ISC"
