@@ -11,7 +11,7 @@ function bubbleSort(arr) {
     }
     return arr;
 }
-console.log(bubbleSort([2,1,4,3]))
+//console.log(bubbleSort([2,1,4,3]))
 module.exports = {
     bubbleSort
 }

@@ -18,7 +18,7 @@ function WeightConverter(measurement, val)
     return [result1, result2];
 }
 
-console.log(WeightConverter("ounces", 4));
+//console.log(WeightConverter("ounces", 4));
 module.exports = {
     WeightConverter
 }

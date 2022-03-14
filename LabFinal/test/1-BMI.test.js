@@ -11,7 +11,8 @@ describe("calculateBMI",()=>{
         [-78,24,"Please provide a valid height"],
         [89,0,"0.00"],
         [,,"Please provide a valid height"],
-        ["","", "Please provide a valid height"]
+        ["","", "Please provide a valid height"],
+        [5,"", "Please provide a valid weight"]
     ]
     describe.each(BVAdata)('BVA: calculateBMI(%i, %i), Expected: %i',(a,b,expected)=>{
         test(`returns ${BMI.calculateBMI(a,b)}`,()=>{

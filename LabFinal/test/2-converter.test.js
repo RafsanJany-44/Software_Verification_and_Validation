@@ -8,7 +8,9 @@ describe("WeightConverter",()=>{
         [4,"ounces","wrong input"],
         ["ounces",10,["0.63 pounds", "0.00 tons"]],
         ["ounces",3,["0.19 pounds", "0.00 tons"]],
-        ['','',"wrong input"]
+        ['','',"wrong input"],
+        ["tons",5,["10000.00 pounds", "160000.00 ounces"]],
+        ["pounds",7,["112.00 ounces", "0.00 tons"]]
 
     ]
     describe.each(BVAdata)('BVA: WeightConverter(%i, %i), Expected: %i',(a,b,expected)=>{
